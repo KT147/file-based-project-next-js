@@ -1,5 +1,6 @@
 // import { useRouter } from "next/router";
 // import { getEventById } from "../../../dummy-data";
+import Head from "next/head";
 import EventDetails from "../../../components/EventDetails";
 import { getEventById, getFeaturedEvents } from "../../../helpers/api-util";
 
@@ -14,6 +15,10 @@ function EventDetailsPage({ event }) {
 
   return (
     <div>
+      <Head>
+        <title>{event.title}</title>
+        <meta name="description" content={event.description} />
+      </Head>
       <EventDetails
         image={event.image}
         title={event.title}

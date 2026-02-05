@@ -4,6 +4,7 @@ import Button from "./ui/Button.js"
 import DateIcon from "./icons/date-icon.js";
 import AdressIcon from "./icons/address-icon.js";
 import ArrowRightIcon from "./icons/arrow-right-icon.js";
+import Image from "next/image.js";
 
 function EventList({events}) {
 
@@ -12,8 +13,8 @@ function EventList({events}) {
     <ul className={styles.list}>
       {events.map((event) => (
         <li className={styles.item} key={event.id}>
-          <img src={`/${event.image}`} alt={event.title} />
-          <div className={styles.content}>
+          <Image src={`/${event.image}`} alt={event.title} width={250} height={160} />
+          <div className={styles.content}> 
             <div className={styles.summary}>
               <h2>{event.title}</h2>
               <div className={styles.date}>

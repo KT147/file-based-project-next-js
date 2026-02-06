@@ -1,4 +1,5 @@
 import EventList from "../components/EventList";
+import NewsletterRegistration from "../components/input/newsletter-registration";
 import { getFeaturedEvents } from "../helpers/api-util";
 // import { getFeaturedEvents } from "../dummy-data"
 import Head from "next/head";
@@ -12,6 +13,7 @@ function HomePage(props) {
         <title>All Events</title>
         <meta name="description" content="Find events" />
       </Head>
+      <NewsletterRegistration/>
       <EventList events={props.events} />
     </div>
   );

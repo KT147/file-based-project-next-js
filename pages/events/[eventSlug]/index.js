@@ -3,6 +3,7 @@
 import Head from "next/head";
 import EventDetails from "../../../components/EventDetails";
 import { getEventById, getFeaturedEvents } from "../../../helpers/api-util";
+import Comments from "../../../components/input/comments";
 
 function EventDetailsPage({ event }) {
   // const router = useRouter();
@@ -26,6 +27,7 @@ function EventDetailsPage({ event }) {
         time={event.date}
         location={event.location}
       />
+      <Comments eventId={event.id}/>
     </div>
   );
 }
